@@ -1,1 +1,299 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FoodLogistics S.A. | Transport i Logística Alimentària</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --brand-blue: #1a567e;
+            --brand-green: #63a645;
+            --brand-light-green: #97c93e;
+            --text-dark: #333333;
+        }
 
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: var(--text-dark);
+            scroll-behavior: smooth;
+        }
+
+        .bg-brand-blue { background-color: var(--brand-blue); }
+        .bg-brand-green { background-color: var(--brand-green); }
+        .text-brand-blue { color: var(--brand-blue); }
+        .text-brand-green { color: var(--brand-green); }
+        .border-brand-green { border-color: var(--brand-green); }
+
+        .nav-link {
+            transition: color 0.3s ease;
+        }
+        .nav-link:hover {
+            color: var(--brand-green);
+        }
+
+        .hero-gradient {
+            background: linear-gradient(rgba(26, 86, 126, 0.85), rgba(26, 86, 126, 0.7)), 
+                        url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .card-hover {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        #contact-success {
+            display: none;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+
+    <!-- Navegació -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20">
+                <div class="flex items-center">
+                    <!-- Placeholder per al Logo -->
+                    <div class="flex-shrink-0 flex items-center">
+                        <span class="text-2xl font-bold text-brand-blue">Food<span class="text-brand-green">Logistics</span> <span class="text-sm align-top">S.A.</span></span>
+                    </div>
+                </div>
+                <div class="hidden md:flex items-center space-x-8 text-sm font-medium uppercase tracking-wider">
+                    <a href="#inici" class="nav-link">Inici</a>
+                    <a href="#serveis" class="nav-link">Serveis</a>
+                    <a href="#sobre-nosaltres" class="nav-link">Sobre nosaltres</a>
+                    <a href="#contacte" class="bg-brand-green text-white px-5 py-2 rounded-full hover:bg-opacity-90 transition">Contacte</a>
+                </div>
+                <!-- Menú Mòbil -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" class="text-brand-blue focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 px-4 py-4 space-y-2">
+            <a href="#inici" class="block py-2 text-brand-blue">Inici</a>
+            <a href="#serveis" class="block py-2 text-brand-blue">Serveis</a>
+            <a href="#sobre-nosaltres" class="block py-2 text-brand-blue">Sobre nosaltres</a>
+            <a href="#contacte" class="block py-2 text-brand-green font-bold">Contacte</a>
+        </div>
+    </nav>
+
+    <!-- Secció Inici (Hero) -->
+    <section id="inici" class="hero-gradient h-[600px] flex items-center text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center md:text-left">
+            <h1 class="text-4xl md:text-6xl font-extrabold mb-6">Connectem la frescor <br>amb la seva destinació</h1>
+            <p class="text-xl mb-8 max-w-2xl opacity-90">Especialistes en logística integral i transport de productes alimentaris. Garantim la cadena de fred i la màxima qualitat en cada quilòmetre.</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                <a href="#serveis" class="bg-brand-green text-white px-8 py-4 rounded-lg font-bold text-lg hover:scale-105 transition">Els nostres serveis</a>
+                <a href="#contacte" class="bg-white text-brand-blue px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition">Demana pressupost</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Secció Serveis -->
+    <section id="serveis" class="py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-brand-blue mb-4">Serveis Especialitzats</h2>
+                <div class="w-24 h-1 bg-brand-green mx-auto"></div>
+                <p class="mt-4 text-gray-600">Solucions logístiques a mida per al sector de l'alimentació.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Servei 1 -->
+                <div class="bg-white p-8 rounded-xl border border-gray-100 shadow-sm card-hover text-center">
+                    <div class="w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-snowflake text-brand-blue text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-brand-blue">Transport Refrigerat</h3>
+                    <p class="text-gray-600 italic mb-4">[Imatge de camió frigorífic]</p>
+                    <p class="text-gray-600 text-sm">Flota d'última generació amb control de temperatura constant per a fruites, verdures i productes frescos.</p>
+                </div>
+
+                <!-- Servei 2 -->
+                <div class="bg-white p-8 rounded-xl border border-gray-100 shadow-sm card-hover text-center">
+                    <div class="w-16 h-16 bg-green-50 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-warehouse text-brand-green text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-brand-blue">Emmagatzematge Intelig·gent</h3>
+                    <p class="text-gray-600 italic mb-4">[Imatge de magatzem logístic]</p>
+                    <p class="text-gray-600 text-sm">Gestió d'estocs en cambres frigorífiques automatitzades amb traçabilitat total en temps real.</p>
+                </div>
+
+                <!-- Servei 3 -->
+                <div class="bg-white p-8 rounded-xl border border-gray-100 shadow-sm card-hover text-center">
+                    <div class="w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-route text-brand-blue text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-brand-blue">Distribució Capil·lar</h3>
+                    <p class="text-gray-600 italic mb-4">[Imatge de furgoneta de repartiment]</p>
+                    <p class="text-gray-600 text-sm">Arribem a qualsevol punt de venda, des de grans superfícies fins a comerç de proximitat.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Secció Sobre Nosaltres -->
+    <section id="sobre-nosaltres" class="py-20 bg-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/2">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1566576721346-d4a3b4eaad5b?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Equip FoodLogistics" class="rounded-2xl shadow-2xl">
+                        <div class="absolute -bottom-6 -right-6 bg-brand-green text-white p-6 rounded-xl hidden lg:block">
+                            <p class="text-3xl font-bold">+15</p>
+                            <p class="text-sm">Anys d'experiència</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-1/2">
+                    <h2 class="text-3xl font-bold text-brand-blue mb-6">Més que una empresa de transport, som el seu partner de confiança</h2>
+                    <p class="text-gray-700 mb-4 text-lg">A <strong>FoodLogistics S.A.</strong>, entenem que el producte alimentari requereix una cura especial. El nostre logotip reflecteix el nostre compromís: la mà que sosté l'aliment amb cura i el camió que el mou amb eficiència.</p>
+                    <p class="text-gray-700 mb-6">Vam néixer amb la missió d'optimitzar la cadena de subministrament del sector agroalimentari, fusionant tecnologia avançada amb un tracte humà i proper.</p>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center gap-3"><i class="fas fa-check-circle text-brand-green"></i> Sostenibilitat i respecte al medi ambient</li>
+                        <li class="flex items-center gap-3"><i class="fas fa-check-circle text-brand-green"></i> Traçabilitat 100% garantida</li>
+                        <li class="flex items-center gap-3"><i class="fas fa-check-circle text-brand-green"></i> Compromís amb la seguretat alimentària</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Secció Contacte -->
+    <section id="contacte" class="py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white rounded-3xl shadow-xl overflow-hidden flex flex-col md:flex-row">
+                <!-- Info de contacte -->
+                <div class="md:w-1/3 bg-brand-blue p-12 text-white">
+                    <h2 class="text-3xl font-bold mb-8">Contacta'ns</h2>
+                    <p class="mb-8 opacity-80">Estem a la teva disposició per resoldre qualsevol dubte o preparar un pressupost personalitzat.</p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start gap-4">
+                            <i class="fas fa-map-marker-alt mt-1"></i>
+                            <p>Polígon Industrial Nord, Carrer del Transport, 45<br>08000 Barcelona</p>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <i class="fas fa-phone-alt"></i>
+                            <p>+34 93 123 45 67</p>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <i class="fas fa-envelope"></i>
+                            <p>info@foodlogistics.com</p>
+                        </div>
+                    </div>
+
+                    <div class="mt-12 pt-8 border-t border-white/20 flex gap-4">
+                        <a href="#" class="hover:text-brand-green transition"><i class="fab fa-linkedin text-2xl"></i></a>
+                        <a href="#" class="hover:text-brand-green transition"><i class="fab fa-instagram text-2xl"></i></a>
+                        <a href="#" class="hover:text-brand-green transition"><i class="fab fa-twitter text-2xl"></i></a>
+                    </div>
+                </div>
+
+                <!-- Formulari -->
+                <div class="md:w-2/3 p-12">
+                    <div id="contact-success" class="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative mb-6">
+                        <strong class="font-bold">Missatge enviat correctament!</strong>
+                        <span class="block sm:inline">Ens posarem en contacte amb vostè aviat.</span>
+                    </div>
+
+                    <form id="contact-form" onsubmit="handleFormSubmit(event)" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="col-span-1">
+                            <label class="block text-sm font-semibold text-gray-700 mb-2">Nom</label>
+                            <input type="text" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-green focus:outline-none transition">
+                        </div>
+                        <div class="col-span-1">
+                            <label class="block text-sm font-semibold text-gray-700 mb-2">Correu electrònic</label>
+                            <input type="email" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-green focus:outline-none transition">
+                        </div>
+                        <div class="col-span-2">
+                            <label class="block text-sm font-semibold text-gray-700 mb-2">Telèfon de contacte</label>
+                            <input type="tel" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-green focus:outline-none transition">
+                        </div>
+                        <div class="col-span-2">
+                            <label class="block text-sm font-semibold text-gray-700 mb-2">Missatge</label>
+                            <textarea rows="4" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-green focus:outline-none transition"></textarea>
+                        </div>
+                        <div class="col-span-2">
+                            <button type="submit" class="w-full bg-brand-green text-white font-bold py-4 rounded-lg hover:bg-brand-blue transition-all duration-300 transform hover:shadow-lg">
+                                Enviar Missatge
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-brand-blue text-white py-12 border-t border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <span class="text-2xl font-bold">Food<span class="text-brand-green">Logistics</span> <span class="text-xs">S.A.</span></span>
+                    <p class="text-sm mt-2 opacity-60">© 2024 Tots els drets reservats.</p>
+                </div>
+                <div class="flex gap-8 text-sm opacity-80">
+                    <a href="#" class="hover:text-brand-green transition">Avís Legal</a>
+                    <a href="#" class="hover:text-brand-green transition">Política de Privacitat</a>
+                    <a href="#" class="hover:text-brand-green transition">Cookies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Toggle Menú Mòbil
+        const menuBtn = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Tancar menú quan es fa clic en un link (mòbil)
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Gestió del Formulari
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            const form = document.getElementById('contact-form');
+            const successMsg = document.getElementById('contact-success');
+            
+            // Simulem l'enviament
+            form.style.opacity = '0.5';
+            form.style.pointerEvents = 'none';
+
+            setTimeout(() => {
+                form.reset();
+                form.style.opacity = '1';
+                form.style.pointerEvents = 'auto';
+                successMsg.style.display = 'block';
+                
+                // Amaguem el missatge després de 5 segons
+                setTimeout(() => {
+                    successMsg.style.display = 'none';
+                }, 5000);
+                
+                // Scroll cap al missatge d'èxit
+                successMsg.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }, 1000);
+        }
+    </script>
+</body>
+</html>
