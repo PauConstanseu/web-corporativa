@@ -1,6 +1,6 @@
 # Web Corporativa de FoodLogistics S.A.
 
-Aquesta és la web corporativa de FoodLogistics S.A., una empresa fictícia dedicada a [descripció breu de l'empresa] dins el mòdul *Projecte Intermodular*.
+Aquesta és la web corporativa de FoodLogistics S.A., una empresa fictícia dins el mòdul *Projecte Intermodular*.
 
 ## Demostració
 
